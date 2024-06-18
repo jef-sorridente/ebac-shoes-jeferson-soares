@@ -1,0 +1,176 @@
+/* Global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --cor-primaria: #3868d5;
+  --cor-secundaria: #eeeeee;
+  --cor-hover: #2f57b3;
+}
+
+body {
+  font-family: "Roboto", serif;
+  font-weight: 400;
+  background-color: var(--cor-secundaria);
+}
+
+.titulo {
+  font-style: italic;
+  color: var(--cor-secundaria);
+}
+
+.subtitulo {
+  width: 100%;
+  font-style: italic;
+  color: var(--cor-primaria);
+  border-bottom: 2px solid var(--cor-primaria);
+  padding-bottom: 10px;
+  margin-bottom: 25px;
+}
+
+.container {
+  max-width: 1024px;
+  margin: auto;
+  padding: 0 25px;
+}
+
+/* Fim global */
+
+/* Header */
+
+.header {
+  background-color: var(--cor-primaria);
+}
+
+.header-container,
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-container {
+  padding: 10px;
+}
+
+.menu {
+  color: var(--cor-secundaria);
+  gap: 25px;
+}
+
+.menu li a {
+  color: var(--cor-texto-primaria);
+  font-weight: bold;
+}
+
+/*Fim Header */
+
+/* Sobre */
+.sobre {
+  margin: 50px 0;
+  display: grid;
+  grid-template-columns: 39% 59%;
+  column-gap: 2%;
+}
+
+.sobre img {
+  width: 100%;
+}
+
+/* Fim Sobre */
+
+/* Produtos */
+
+.produtos {
+  display: grid;
+  grid-template-columns: repeat(4, 24.25%);
+  column-gap: 1%;
+}
+
+.produtos img {
+  width: 100%;
+}
+
+.botao {
+  width: 100%;
+  margin: 15px 0;
+  padding: 8px 0;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--cor-primaria);
+  color: var(--cor-secundaria);
+  cursor: pointer;
+  font-weight: bolder;
+  transition: 0.5s;
+}
+
+.botao:hover {
+  background-color: var(--cor-hover);
+  transition: 0.5s;
+}
+
+@media screen and (min-width: 641px) and (max-width: 1023px) {
+  .container {
+    padding: 0 50px;
+  }
+
+  .sobre {
+    grid-template-columns: 100%;
+  }
+
+  .sobre img {
+    margin-bottom: 25px;
+  }
+
+  .produtos {
+    grid-template-columns: repeat(2, 49%);
+    column-gap: 2%;
+  }
+
+  .subtitulo {
+    margin: 25px 0;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .container {
+    padding: 0 25px;
+  }
+
+  .menu {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .menu li {
+    width: 100%;
+  }
+
+  nav {
+    width: 50%;
+  }
+
+  .sobre {
+    grid-template-columns: 100%;
+    row-gap: 1%;
+  }
+
+  .sobre img {
+    margin-bottom: 25px;
+  }
+
+  .produtos {
+    grid-template-columns: 100%;
+    row-gap: 1%;
+  }
+
+  .subtitulo {
+    margin: 25px 0;
+  }
+}
